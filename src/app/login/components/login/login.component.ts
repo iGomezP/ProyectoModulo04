@@ -34,7 +34,7 @@ export class LoginComponent {
       error: (error) => this.snackService.printError(error),
       complete: () => {
         this.saveToken();
-        this.router.navigate(['']);
+        this.router.navigate(['']).then(() => window.location.reload());
       },
     });
   }
